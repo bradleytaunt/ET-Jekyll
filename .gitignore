@@ -1,0 +1,5 @@
+_site/
+_drafts/
+.jekyll-metadata
+Gemfile.lock
+.DS_Store

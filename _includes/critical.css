@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: #fffff8;
+    color: #111;
+    counter-reset: sidenote-counter;
+    font: 1.4rem/2rem Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    height: 100%;
+    margin: 0;
+}
+.fonts-loaded body {
+    font: 1.4rem/2rem et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+}
+h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; }
+h2 { font-size: 2.2rem; margin-top: 4.2rem; }
+h3 { font-size: 1.7rem; margin-top: 2.6rem; }
+
+p {
+    position: relative;
+}
+
+a,a:visited,a:hover {
+    color: #111;
+}
+
+blockquote {
+    margin: 2rem 0 2rem 4rem;
+}
+
+blockquote footer {
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+hr {
+    background: #111;
+    border: 0;
+    height: 1px;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+pre {
+    font-size: 90%;
+    margin-left: 2.5%;
+    overflow-x: auto;
+}
+
+img {
+    max-width: 100%;
+}
