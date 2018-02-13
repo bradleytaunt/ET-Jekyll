@@ -13,7 +13,7 @@ The differences are subtle when comparing my variation to Tufte CSS, but these c
 
 ## Setup
 
-To use ET-Jekyll, simply download the files off <a href="">Github</a> and run the build as you would any other Jekyll site:
+To use ET-Jekyll, simply <a href="https://github.com/bradleytaunt/ET-Jekyll">download the files off Github</a> and run the build as you would any other Jekyll site:
 
 <pre class="code">
     jekyll serve
@@ -49,7 +49,7 @@ Write your content using regular <code>markdown</code> structure for paragraphs,
 - List item two
 - List item three
 
-**Order List**
+**Ordered List**
 1. List item one
 2. List item two
 3. List item three
@@ -58,12 +58,12 @@ Write your content using regular <code>markdown</code> structure for paragraphs,
 
 <blockquote>
     The minimum we should hope for with any display technology is that it should do no harm.
-    <footer><a href="">Edward Tufte</a></footer>
+    <footer><a href="https://www.edwardtufte.com/tufte/">Edward Tufte</a></footer>
 </blockquote>
 
 <blockquote>
     The public is more familiar with bad design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.
-    <footer><a href="">Paul Rand</a></footer>
+    <footer><a href="http://www.paul-rand.com">Paul Rand</a></footer>
 </blockquote>
 
 **Links**
@@ -83,6 +83,57 @@ Text links are set to the same color as the rest of the base content, as not to 
     panel.rug(x, y, col=1, x.units = rep("snpc", 2), y.units = rep("snpc", 2), ...)})
 </pre>
 
+**Math Equations**
+
+ET-Jekyll uses MathJax for placing mathematical equations inline within your content.
+
+When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+**Tables**
+
+<figure>
+<p class="sans">End of year device distribution by percentage</p>
+<table>
+    <thead>
+        <tr>
+            <th>Devices</th>
+            <th>2016</th>
+            <th>2017</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Medium phones</th>
+            <td>44</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <th>Phablets</th>
+            <td>41</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <th>Full-size tablets</th>
+            <td>8</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>Small tablets</th>
+            <td>6</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th>Small phones</th>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<span class="marginnote">Source: <a href="http://flurrymobile.tumblr.com/tagged/insights/">Flurry Insights</a>, 2016-2017.</span>
+</figure>
+
 ### Sidenotes: Footnotes and Marginal Notes
 
 On larger viewports, sidenotes<span class="sidenote-number"></span> and marginal notes are placed into the far right column so the reader avoids eye-jumping around the page to find the corresponding content. On small viewports these notes are placed under it's parent content.
@@ -96,10 +147,12 @@ The original Tufte CSS hides sidenote and marginal note content on smaller viewp
 
 ### Figures
 
-You're welcome to simply use an <code>img</code> element when pasting in static content to your articles, but a <code>figure</code> element with included marginal notes is preferred.
+You're welcome to simply use an <code>img</code> element when pasting in static content to your articles, but a <code>figure</code> element with included marginal notes is preferred. 
+
+Also remember to add the <code>lazyload</code> class to all image elements to help improve initial loading performance.
 
 <figure>
-    <img src="https://bradleytaunt.com/images/articles/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
+    <img class="lazyload" data-src="{{ site.baseurl }}/images/articles/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
     <span class="marginnote">User interface toggle comparison between flat and skeuomorphic design by <a href="https://bradleytaunt.com">Bradley Taunt</a>.</span>
 </figure>
 
@@ -134,6 +187,6 @@ The more intricate class styles are declared in the <code>style.scss</code> file
 
 ## Final Thoughts
 
-This theme is an open source side project by <a href="https://bradleytaunt.com">Bradley Taunt</a> - made with passion and care. Edit, improve, customize or butcher this theme as much as you'd like. If you spot an issue or find a better solution for any user pain-spots, please don't hesitate to <a href="">open a PR with your changes</a>.
+This theme is an open source side project by <a href="https://bradleytaunt.com">Bradley Taunt</a> - made with passion and care. Edit, improve, customize or butcher this theme as much as you'd like. If you spot an issue or find a better solution for any user pain-spots, please don't hesitate to <a href="https://github.com/bradleytaunt/ET-Jekyll/pulls">open a PR with your changes</a>.
 
 Enjoy ET-Jekyll!
