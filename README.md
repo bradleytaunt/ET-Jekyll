@@ -2,4 +2,4 @@
 A minimal Jekyll theme inspired by <a href="https://github.com/edwardtufte/tufte-css">Tufte CSS</a>
 
 ### How to use
-Detailed instructions can be found <a href="http://bradleytaunt.com/et-jekyll-theme/">here</a>.
+A live demo with detailed instructions can be found <a href="http://et-jekyll.surge.sh/et-jekyll-theme/">here</a>.

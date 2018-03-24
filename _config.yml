@@ -3,7 +3,7 @@
 
 title: ET-Jekyll Theme
 description: A minimal Jekyll theme inspired by Tufte CSS
-url: https://bradleytaunt.com/et-jekyll-theme
+url: http://et-jekyll.surge.sh/
 
 
 #########################
@@ -24,7 +24,7 @@ sass:
   sass_dir: css
   style:    compressed
 
-baseurl: /
+baseurl: http://et-jekyll.surge.sh
 permalink: pretty
 timezone: America/New_York
 future: false
