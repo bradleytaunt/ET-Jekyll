@@ -158,7 +158,7 @@ Also remember to add the <code>lazyload</code> class to all image elements to he
 
 ## Performance
 
-### Using FontFaceObserver
+### Using font-display
 
 ET-Jekyll theme uses <a href="https://github.com/bramstein/fontfaceobserver">Bram Stein’s FontFaceObserver script</a> which adds a <code>fonts-loaded</code> class to the document <code>html</code> only once the custom typeface (<i>et-book</i> in this instance) is loaded. Doing so prevents <a href="https://css-tricks.com/fout-foit-foft/">FOIT</a> and ugly content pop-in on slower connections.
 
