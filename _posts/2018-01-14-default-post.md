@@ -7,7 +7,7 @@ permalink: et-jekyll-theme/
 date: 2018-01-14
 ---
 
-ET-Jekyll theme is based off of <a href="http://www.daveliepmann.com">Dave Liepmann's</a> awesome <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> - which takes it's style and inspiration from the wonderful book and handout designs of <a href="https://www.edwardtufte.com/tufte/">Edward Tufte</a>.
+ET-Jekyll theme is based off of <a href="http://www.daveliepmann.com">Dave Liepmann's</a> awesome <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> - which takes its style and inspiration from the wonderful book and handout designs of <a href="https://www.edwardtufte.com/tufte/">Edward Tufte</a>.
 
 The differences are subtle when comparing my variation to Tufte CSS, but these changes were made out of personal preference and are not in any way "better". If you prefer the <a href="https://edwardtufte.github.io/tufte-css/">original CSS styling</a> - please use it!
 
