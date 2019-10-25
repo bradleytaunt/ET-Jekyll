@@ -24,7 +24,7 @@ sass:
   sass_dir: css
   style:    compressed
 
-baseurl: https://et-jekyll.netlify.com/
+baseurl: https://et-jekyll.netlify.com
 permalink: pretty
 timezone: America/New_York
 future: false
