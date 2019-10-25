@@ -16,7 +16,7 @@ The differences are subtle when comparing my variation to Tufte CSS, but these c
 To use ET-Jekyll, simply <a href="https://github.com/bradleytaunt/ET-Jekyll">download the files off Github</a> and run the build as you would any other Jekyll site:
 
 <pre class="code">
-    jekyll serve
+jekyll serve
 </pre>
 
 You'll want to make edits to the <code>_config.yml</code> and <code>Gemfile</code> for core setting changes. For navigation, heading, footer or post layout changes - edit the corresponding HTML files in the includes folder.
@@ -73,14 +73,14 @@ Text links are set to the same color as the rest of the base content, as not to 
 **Code Snippets**
 
 <pre class="code">
-    library(lattice)
-    x <- mtcars$wt
-    y <- mtcars$mpg
-    xyplot(y ~ x, xlab="Car weight (lb/1000)", ylab="Miles per gallon of fuel",
-    par.settings = list(axis.line = list(col="transparent")),
-    panel = function(x, y,...) { 
-    panel.xyplot(x, y, col=1, pch=16)
-    panel.rug(x, y, col=1, x.units = rep("snpc", 2), y.units = rep("snpc", 2), ...)})
+library(lattice)
+x <- mtcars$wt
+y <- mtcars$mpg
+xyplot(y ~ x, xlab="Car weight (lb/1000)", ylab="Miles per gallon of fuel",
+par.settings = list(axis.line = list(col="transparent")),
+panel = function(x, y,...) { 
+panel.xyplot(x, y, col=1, pch=16)
+panel.rug(x, y, col=1, x.units = rep("snpc", 2), y.units = rep("snpc", 2), ...)})
 </pre>
 
 **Math Equations**
@@ -93,8 +93,8 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 **Tables**
 
-<figure>
 <p class="sans">End of year device distribution by percentage</p>
+<figure>
 <table>
     <thead>
         <tr>
@@ -131,7 +131,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         </tr>
     </tbody>
 </table>
-<span class="marginnote">Source: <a href="http://flurrymobile.tumblr.com/tagged/insights/">Flurry Insights</a>, 2016-2017.</span>
+<span class="marginnote">Source: <a href="http://flurrymobile.tumblr.com/tagged/insights/">Flurry Insights</a>, 2016-2017. This is a sidenote. Feel free to add as much content as needed in these elements in order to better explain their attached figure item.</span>
 </figure>
 
 ### Sidenotes: Footnotes and Marginal Notes
@@ -152,7 +152,7 @@ You're welcome to simply use an <code>img</code> element when pasting in static 
 Also remember to add the <code>lazyload</code> class to all image elements to help improve initial loading performance.
 
 <figure>
-    <img class="lazyload" data-src="{{ site.baseurl }}/images/articles/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
+    <img loading="lazy" src="{{ site.baseurl }}/images/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
     <span class="marginnote">User interface toggle comparison between flat and skeuomorphic design by <a href="https://bradleytaunt.com">Bradley Taunt</a>.</span>
 </figure>
 
@@ -160,30 +160,20 @@ Also remember to add the <code>lazyload</code> class to all image elements to he
 
 ### Using font-display
 
-ET-Jekyll theme uses <a href="https://github.com/bramstein/fontfaceobserver">Bram Stein’s FontFaceObserver script</a> which adds a <code>fonts-loaded</code> class to the document <code>html</code> only once the custom typeface (<i>et-book</i> in this instance) is loaded. Doing so prevents <a href="https://css-tricks.com/fout-foit-foft/">FOIT</a> and ugly content pop-in on slower connections.
+<p><strike>ET-Jekyll theme uses <a href="https://github.com/bramstein/fontfaceobserver">Bram Stein’s FontFaceObserver script</a> which adds a <code>fonts-loaded</code> class to the document <code>html</code> only once the custom typeface (<i>et-book</i> in this instance) is loaded. Doing so prevents <a href="https://css-tricks.com/fout-foit-foft/">FOIT</a> and ugly content pop-in on slower connections.</strike></p>
+
+ET-Jekyll now uses the `font-display` property to swap out the custom typeface. Less JS and simplicity is always a good thing.
 
 <pre class="code">
-    // Load webfonts in
-    var font = new FontFaceObserver( "et-book" )
-    font.load().then(function () {
-      document.documentElement.className += " fonts-loaded";
-    });
-</pre>
-
-<pre>
-    body {
-        font: 1.4rem/2rem Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    }
-    .fonts-loaded body {
-        font: 1.4rem/2rem et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    }
+// Keeping things simple
+font-display: swap;
 </pre>
 
 ### Critical CSS
 
-All base styling for this theme is loaded <code>inline</code> in the header of the document. This ensures the main structure, layout and core elements of ET-Jekyll load instantly and avoid even further "pop-in".
+All styling for this theme is loaded <code>inline</code> in the header of the document. This ensures the main structure, layout and core elements of ET-Jekyll load instantly and avoid even further "pop-in".
 
-The more intricate class styles are declared in the <code>style.scss</code> file.
+Any design changes should be made to the <code>style.scss</code> file inside the `_includes` folder.
 
 ## Final Thoughts
 

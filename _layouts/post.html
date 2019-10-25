@@ -2,34 +2,30 @@
 layout: compress
 ---
 
-{% include head-post.html %}
+{% include head.html %}
 
-    <div class="main-container">
+    <main>
 
         {% include header.html %}
 
-        <div class="inner-container">
+        <article>
+            <h1>{{ page.title }}</h1>
+            <p class="subtitle">{{ page.date | date: "%b %-d, %Y" }}</p>
 
-            <article>
-                <h1>{{ page.title }}</h1>
-                <p class="subtitle">{{ page.date | date: "%b %-d, %Y" }}</p>
+            {{ page.content }}
 
-                {{ page.content }}
+            <hr>
 
-                <hr>
+            <h2>Other Articles</h2>
+            {% for post in site.posts %}
+                <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <span class="mini-note">{{ post.date | date: "%b %-d, %Y" }}</span></p>
+            {% endfor %}
+        </article>
 
-                <h2>Other Articles</h2>
-                {% for post in site.posts %}
-                    <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    <span class="mini-note">{{ post.date | date: "%b %-d, %Y" }}</span></p>
-                {% endfor %}
-            </article>
+    </main>
 
-            {% include footer.html %}
-
-        </div>
-
-    </div>
+    {% include footer-post.html %}
 
 </body>
 </html>

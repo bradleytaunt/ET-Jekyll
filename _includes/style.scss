@@ -1,0 +1,348 @@
+/**************************************
+    $CRITICAL CSS
+/**************************************/
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**** $ET BOOK FONT ******************/
+@font-face {
+    font-family: "et-book";
+    src: url("{{ site.baseurl }}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("{{ site.baseurl }}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("{{ site.baseurl }}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("{{ site.baseurl }}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("{{ site.baseurl }}/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("{{ site.baseurl }}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+    src: url("{{ site.baseurl }}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("{{ site.baseurl }}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("{{ site.baseurl }}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("{{ site.baseurl }}/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("{{ site.baseurl }}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+    src: url("{{ site.baseurl }}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("{{ site.baseurl }}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("{{ site.baseurl }}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("{{ site.baseurl }}/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book-roman-old-style";
+    src: url("{{ site.baseurl }}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+    src: url("{{ site.baseurl }}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("{{ site.baseurl }}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("{{ site.baseurl }}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("{{ site.baseurl }}/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: #fffff8;
+    color: #111;
+    counter-reset: sidenote-counter;
+    font: 1.4rem/2rem et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 12.5%;
+    padding-top: 5rem;
+    width: 87.5%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-transform: capitalize;
+}
+h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; }
+h2 { font-size: 2.2rem; margin-top: 4.2rem; }
+h3 { font-size: 1.7rem; margin-top: 2.6rem; }
+
+p,table,blockquote,pre,img,hr,.mini-note {
+    box-sizing: border-box;
+    max-width: 55%;
+}
+.MathJax_SVG_Display {
+    max-width: 55% !important;
+}
+
+p {
+    position: relative;
+}
+
+a,a:visited {
+    color: #111;
+
+    &:hover {
+        color: rgb(220, 40, 40);
+    }
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0;
+    padding: 2rem 0 2rem 4rem;
+}
+
+blockquote footer {
+    font-style: normal;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+figure {
+    align-items: flex-start;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+hr {
+    background: #111;
+    border: 0;
+    height: 1px;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+pre {
+    font-size: 80%;
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+code {
+    font-size: 80%;
+}
+
+img {
+    margin-right: 4rem;
+}
+
+/**************************************
+    $DEFAULT ELEMENTS
+/**************************************/
+table {
+    border-collapse: separate;
+    border-spacing: 1.5rem .5rem;
+    margin: 0 6rem 0 -1.5rem;
+    text-align: left;
+    width: 100%;
+
+    th, td {
+        font-weight: bold;
+        padding: 0;
+
+        &:not(:first-child) {
+            text-align: right;
+        }
+    }
+
+    thead th {
+        border-bottom: 1px solid #111;
+    }
+}
+
+/**************************************
+    $DEFAULT CLASSES
+/**************************************/
+/*p*/.subtitle {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+/*p*/.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em;
+}
+
+/*span*/.caps {
+    font-variant: small-caps;
+}
+
+/*span*/.italics {
+    font-style: italic;
+}
+
+/*span*/.marginnote,
+/*span*/.sidenote {
+    font-size: 80%;
+    left: calc(100% + 4rem);
+    line-height: 1.3rem;
+    max-width: 400px;
+    padding-top: 1rem;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
+
+/*span*/.sidenote {
+    &:before {
+        content: counter(sidenote-counter) " ";
+        font-family: et-book-roman-old-style;
+        position: relative;
+        top: -0.5rem;
+        vertical-align: baseline;
+    }
+}
+
+/*span*/.sidenote-number {
+    counter-increment: sidenote-counter;
+
+    &:after {
+        content: counter(sidenote-counter);
+        font-family: et-book-roman-old-style;
+        font-size: 80%;
+        left: 0.1rem;
+        position: relative;
+        top: -0.5rem;
+        vertical-align: baseline;
+    }
+}
+
+figure {
+    /*span*/.marginnote,
+    /*span*/.sidenote {
+        left: auto;
+        position: relative;
+    }
+}
+
+/*span*/.mini-note {
+    display: block;
+    font-size: 80%;
+    font-style: italic;
+}
+
+/*div*/.epigraph {
+    margin: 4rem 0;
+
+    blockquote {
+        font-style: italic;
+        margin: 2rem 0;
+
+        footer {
+            font-style: normal;
+        }
+    }
+}
+
+/**************************************
+    $CONTAINERS
+/**************************************/
+.bottom-footer {
+    margin: 6rem 0;
+}
+
+/**************************************
+    $NAVIGATION
+/**************************************/
+nav {
+    margin-bottom: 6rem;
+    margin-top: 1rem;
+
+    .menu-icon {
+        cursor: pointer;
+        display: none;
+        text-decoration: underline;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-btn:checked ~ .site-nav {
+        display: block;
+    }
+
+    ul.site-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0 1.5rem 0 0;
+        }
+
+        a,a:visited {
+            text-decoration: none;
+        }
+    }
+}
+
+/**************************************
+    $MEDIA QUERIES - TABLET
+/**************************************/
+@media(max-width: 850px) {
+
+    body {
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+
+    p,table,blockquote,pre,img,hr,.mini-note {
+        max-width: 100%;
+    }
+
+    .MathJax_SVG_Display {
+        max-width: 100% !important;
+    }
+
+    nav {
+
+        .menu-icon {
+            display: inline-block;
+        }
+
+        ul.site-nav {
+            display: none;
+
+            li {
+                display: block;
+                margin: 1rem 0;
+                width: 100%;
+
+                a,a:visited {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    figure {
+        flex-direction: column;
+    }
+
+    /*span*/.marginnote,
+    /*span*/.sidenote {
+        display: block;
+        left: auto;
+        margin-top: 1rem;
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+
+}

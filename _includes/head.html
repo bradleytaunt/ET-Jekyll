@@ -16,10 +16,11 @@
     <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
     <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
     <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
-    <link rel="stylesheet" href="{{ site.baseurl}}/css/style.css">
-    <!-- INLINE CRITICAL CSS -->
+    {% capture critical %}
+        {% include style.scss %}
+    {% endcapture %}
     <style>
-        {% include critical.css %}
+        {{ critical | scssify }}
     </style>
 </head>
 
