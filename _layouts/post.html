@@ -16,11 +16,7 @@ layout: compress
 
             <hr>
 
-            <h2>Other Articles</h2>
-            {% for post in site.posts %}
-                <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                <span class="mini-note">{{ post.date | date: "%b %-d, %Y" }}</span></p>
-            {% endfor %}
+            <p><a href="{{ site.baseurl }}/articles">← Back to all articles</a></p>
         </article>
 
     </main>
