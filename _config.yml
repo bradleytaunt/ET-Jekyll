@@ -3,7 +3,8 @@
 
 title: ET-Jekyll Theme
 description: A minimal Jekyll theme inspired by Tufte CSS
-url: https://et-jekyll.netlify.com/
+url: ""
+host: 0.0.0.0
 
 
 #########################
@@ -24,7 +25,7 @@ sass:
   sass_dir: css
   style:    compressed
 
-baseurl: https://et-jekyll.netlify.com
+baseurl: ""
 permalink: pretty
 timezone: America/New_York
 future: false
