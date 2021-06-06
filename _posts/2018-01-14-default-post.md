@@ -149,7 +149,7 @@ The original Tufte CSS hides sidenote and marginal note content on smaller viewp
 
 You're welcome to simply use an <code>img</code> element when pasting in static content to your articles, but a <code>figure</code> element with included marginal notes is preferred. 
 
-Also remember to add the <code>lazyload</code> class to all image elements to help improve initial loading performance.
+Also remember to add the <code>loading="lazy"</code> attribute to all image elements to help improve initial loading performance.
 
 <figure>
     <img loading="lazy" src="{{ site.baseurl }}/images/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
