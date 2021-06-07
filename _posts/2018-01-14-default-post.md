@@ -169,11 +169,11 @@ ET-Jekyll now uses the `font-display` property to swap out the custom typeface. 
 font-display: swap;
 </pre>
 
-### Critical CSS
+### CSS File
 
-All styling for this theme is loaded <code>inline</code> in the header of the document. This ensures the main structure, layout and core elements of ET-Jekyll load instantly and avoid even further "pop-in".
+All styling for this theme is loaded inside the `style.css` file (compressed by default). This ensures the main structure, layout and core elements of ET-Jekyll load instantly and avoid even further "pop-in". The `et-book` typeface is pulled in from the `/fonts` directory which helps cache and avoid FOUT.
 
-Any design changes should be made to the <code>style.scss</code> file inside the `_includes` folder.
+Any design changes should be made to the <code>style.scss</code> file inside the root directory.
 
 ## Final Thoughts
 

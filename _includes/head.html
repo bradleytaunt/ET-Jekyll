@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
-<html lang="en" class="fonts-loaded" dir="ltr">
-<!--#else -->
 <html lang="en" dir="ltr">
-<!--#endif -->
 
 <head>
     <meta charset="UTF-8">
@@ -15,13 +11,7 @@
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
     <link href='{{ site.baseurl }}/feed.xml' rel='alternate' type='application/atom+xml'>
     <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}">
-    <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
-    {% capture critical %}
-        {% include style.scss %}
-    {% endcapture %}
-    <style>
-        {{ critical | scssify }}
-    </style>
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 </head>
 
 <body>
