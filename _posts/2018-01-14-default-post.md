@@ -1,7 +1,7 @@
 ---
 layout: post
 excerpt_separator: <!--more-->
-title: ET-Jekyll theme
+title: ET-Jekyll theme.
 description: A visual breakdown of how to use the ET jekyll theme
 permalink: et-jekyll-theme/
 date: 2018-01-14

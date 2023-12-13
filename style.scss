@@ -58,24 +58,23 @@ body {
     margin: 0 auto;
     max-width: 1440px;
     padding-left: 12.5%;
-    padding-top: 5rem;
+    padding-top: 2rem;
     width: 87.5%;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-style: italic;
     font-weight: normal;
     line-height: 1;
     margin: 0;
     text-transform: capitalize;
 }
-h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; }
-h2 { font-size: 2.2rem; margin-top: 4.2rem; }
-h3 { font-size: 1.7rem; margin-top: 2.6rem; }
+h1 { font-size: 3rem; font-style: normal; margin-top: 2.6rem; }
+h2 { font-size: 2rem; margin-top: 4rem; }
+h3 { font-size: 1.5rem; margin-top: 2rem; }
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
-    max-width: 55%;
+    max-width: 70%;
 }
 .MathJax_SVG_Display {
     max-width: 55% !important;
